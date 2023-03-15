@@ -20,4 +20,8 @@ export class eventController{
       return  this.eventservice.interact();
     }
 
+    @Get('comptroller')
+    comptroller(){
+      return  this.eventservice.comptroll();
+    }
 }
