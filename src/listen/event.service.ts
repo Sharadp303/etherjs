@@ -143,11 +143,14 @@ async findEveryThing(){
   const borrowApy = (((Math.pow((borrowRatePerBlock / ethMantissa * blocksPerDay) + 1, daysPerYear))) - 1) * 100;
 
   const totalSupply= await contract.totalSupply();
- // const tsup=ethers.utils.formatUnits(totalSupply)
+  const tsup=ethers.utils.formatUnits(totalSupply)
   console.log("Supply Apy:",supplyApy.toFixed(2))
   console.log("Borrow Apy:",borrowApy.toFixed(2))
   
-  //console.log("total Supply:",(Number(tsup)*1000).toFixed(2));
+  console.log("total Supply:",(Number(tsup)*1000).toFixed(2));
+
+  const totalBorrow=await contract.totalBorrow();
+  console.log(totalBorrow)
   
   
   
