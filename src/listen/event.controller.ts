@@ -24,4 +24,8 @@ export class eventController{
     comptroller(){
       return  this.eventservice.comptroll();
     }
+    @Get('compound')
+    findEveryThing(){
+      return  this.eventservice.findEveryThing();
+    }
 }
