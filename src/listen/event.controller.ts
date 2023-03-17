@@ -28,4 +28,10 @@ export class eventController{
     findEveryThing(){
       return  this.eventservice.findEveryThing();
     }
+
+    @Get('liquid')
+    liquidation(){
+      return  this.eventservice.liquidation();
+    }
+  
 }
